@@ -68,12 +68,25 @@ npm run preview    # serves the built bundle locally for a final check
 
 ```
 greeting_app/
-├── index.html            # entry HTML, mounts #root
-├── main.jsx              # React entry point, renders <App />
-├── greetings-app.jsx     # the entire app: screens, templates, canvas renderer
-├── vite.config.js        # Vite + React plugin config (port 5173, auto-open)
+├── index.html              # entry HTML, mounts #root
+├── vite.config.js          # Vite + React plugin config (port 5173, auto-open)
 ├── package.json
-└── README.md
+├── README.md
+├── generate-docs.cjs       # build-time script that produces the PDF doc
+├── WishCraft-Documentation.pdf
+└── src/
+    ├── main.jsx            # React entry point, renders <App />
+    ├── App.jsx             # top-level component, picks Login vs Home
+    ├── components/
+    │   ├── LoginScreen.jsx
+    │   ├── HomeScreen.jsx
+    │   ├── PremiumPopup.jsx
+    │   ├── ShareSheet.jsx
+    │   └── CardPreview.jsx
+    ├── data/
+    │   └── templates.js    # CATEGORIES + TEMPLATES catalog
+    └── styles/
+        └── styles.js       # shared inline-style object
 ```
 
 ## Tech stack
